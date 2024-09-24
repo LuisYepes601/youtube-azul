@@ -519,10 +519,16 @@ strong {
         display: none;
     }.aside{
         width: 100%;
+        overflow: scroll;
     }.card5,.card6,.card7,.card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15,.card16{
         display: none;
     }.video{
         width: 100%;
+    }.video_contain{
+        display: flex;
+        align-items: start;
+    }.fecha_publicacion{
+        margin-left: 3.6rem;
     }
 
 }
