@@ -27,14 +27,12 @@ body {
     grid-template-areas:
 
         "header  header  header  header  header"
-        "aside   barra__busqueda  barra__busqueda  barra__busqueda barra__busqueda"
+        "barra__busqueda   barra__busqueda  barra__busqueda  barra__busqueda barra__busqueda"
         "aside   card1   card2   card3   card4"
         "aside   card5   card6   card7   card8"
         "aside   card9   card10  card11  card12"
-        "aside   card13  card14  card15  ard16"
+        "aside   card13  card14  card15  card16"
         "aside   footer  footer  footer  footer";
-
-
 
 }
 
@@ -44,6 +42,7 @@ body {
     padding: 1rem;
     position: sticky;
     top: 0;
+    z-index: 1;
 
 }
 
@@ -80,6 +79,8 @@ input[type="search"] {
     right: 63px;
 }
 
+.microfono {}
+
 .notificaciones {
     display: flex;
     justify-content: center;
@@ -110,11 +111,11 @@ input[type="search"] {
     grid-area: barra__busqueda;
     gap: 1rem;
     align-items: center;
-    overflow: scroll;
+    overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
-    padding: 25px 25px;
     max-height: 5rem;
+    padding: 25px 25px;
     background-color: var(--color-principal);
     border: 1px solid var(--color-aside);
 
@@ -164,9 +165,13 @@ input[type="search"] {
 
 .aside {
     grid-area: aside;
+    width: 100%;
+    max-width: 200px;
     background-color: var(--color-aside);
     display: flex;
     gap: 1rem;
+    position: relative;
+
 }
 
 .menu__lateral {
@@ -198,6 +203,29 @@ hr {
     font-weight: 500;
 }
 
+.biblioteca {
+    padding: 1rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.biblioteca a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 1rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(57, 112, 190, 1);
+}
+
 .redes_sociales {
     display: flex;
     flex-direction: column;
@@ -216,34 +244,128 @@ hr {
 
 }
 
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9,
+.card10,
+.card11,
+.card12,
+.card13,
+.card14,
+.card15,
+.card16 {
+    background-color: var(--color-principal);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
 .card1 {
     grid-area: card1;
-    background-color: bisque;
+
+
+
+
 }
 
 .card2 {
     grid-area: card2;
-    background-color: rgb(200, 196, 255);
+
+
 }
 
 .card3 {
     grid-area: card3;
-    background-color: rgb(145, 85, 13);
+
+
 }
 
 .card4 {
     grid-area: card4;
-    background-color: bisque;
+
 }
 
 .card5 {
     grid-area: card5;
-    background-color: bisque;
+
 }
 
 .card6 {
     grid-area: card6;
-    background-color: bisque;
+
+}
+
+.card7 {
+    grid-area: card7;
+
+}
+
+.card8 {
+    grid-area: card8;
+
+}
+
+.card9 {
+    grid-area: card9;
+
+}
+
+.card10 {
+    grid-area: card10;
+
+}
+
+.card11 {
+    grid-area: card11;
+
+}
+
+.card12 {
+    grid-area: card12;
+
+}.card13 {
+    grid-area: card13;
+
+}.card14 {
+    grid-area: card14;
+
+}.card15 {
+    grid-area: card15;
+
+}.card16{
+    grid-area: card16;
+
+}
+
+.video {
+    border: none;
+    /* 50% del alto de la ventana */
+    aspect-ratio: 16 / 9;
+    transition: transform 0.3s ease;
+    width: 273px;
+
+
+
+}
+
+.video:hover {
+    transform: scale(1.2);
+}
+
+.info__video {
+    display: flex;
+    gap: 1rem;
+    padding: .7rem 0 .7rem 0;
 }
 
 .footer {
@@ -251,7 +373,6 @@ hr {
     background-color: var(--color-footer);
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem;
@@ -271,17 +392,22 @@ strong {
 
 @media screen and (max-width: 834px) {
     .content {
+        overflow: none;
         grid-template-areas:
-        "header header header header header"
-        "barra__busqueda barra__busqueda barra__busqueda barra__busqueda barra__busqueda"
-        "aside card1 card2 card3 card4"
-        "aside card5 card6 card7 card8"
-        "aside card9 card10 card11 card12"
-        "aside card13 card14 card15 ard16"
-        "aside footer footer footer footer";
-           
-            
+        
+            "header header header header header"
+            "barra__busqueda barra__busqueda barra__busqueda barra__busqueda barra__busqueda"
+            "aside card1 card1 card2 card2"
+            "aside card5 card5 card7 card7"
+            "aside card9 card9 card11 card11"
+            "aside card13 card13 card15 card15"
+            "aside footer footer footer footer";
+
+
+    }.card3,.card4,.card6,.card8, .card10, .card12, .card14, .card16{
+        display: none;
     }
+
     .menu_nav {
         display: flex;
         flex-direction: column;
@@ -298,16 +424,60 @@ strong {
         align-items: center;
     }
 
+    .biblioteca {
+        display: block;
+    }
+
     .menu__lateral:not(:first-child) {
         display: none;
-       
 
-    }.menu__lateral a {
+
+
+    }.aside{
+       
+       
+        
+    }
+
+    .menu__lateral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__lateral a {
         display: flex;
         flex-direction: column;
-        padding: 1rem 0 1rem 0;
+        justify-content: space-evenly;
+        align-items: center;
         font-weight: 400;
         font-size: 14px;
+
+    }
+
+    .biblioteca {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .biblioteca a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .biblioteca a:not(:first-child) {
+        display: none;
+
+
+    }
+
+    .bib {
+        position: absolute;
     }
 
     .aside {
@@ -320,20 +490,35 @@ strong {
 
 
 @media (max-width: 428px) {
-   
+
 
     .content {
         grid-template-areas:
-        "header header header header header"
-        "barra__busqueda barra__busqueda barra__busqueda barra__busqueda barra__busqueda"
-        "card1 card1 card2 card3 card4"
-        "card5 card5 card6 card7 card8"
-        "card9 card9 card10 card11 card12"
-        "card13 card13 card14 card15 ard16"
-        "aside aside aside aside aside"
-        "footer footer footer footer footer";
-           
-    }.menu__lateral{
+            "header header header header header"
+            "barra__busqueda barra__busqueda barra__busqueda barra__busqueda barra__busqueda"
+            "card1 card1 card2 card3 card4"
+            "card5 card5 card6 card7 card8"
+            "card9 card9 card10 card11 card12"
+            "card13 card13 card14 card15 card16"
+            "aside aside aside aside aside"
+            "footer footer footer footer footer";
+
+    }
+
+    .menu__lateral {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .biblioteca {
+        display: none;
+
+    }
+
+    hr {
+        display: none;
+    }.aside{
+        width: 100%;
     }
 }
