@@ -379,8 +379,11 @@ hr {
     display: flex;
     gap: 1rem;
     padding: .7rem 0 .7rem 0;
+    max-height: 8rem;
+    align-items: center;
 }.info__video img{
     height: 3rem;
+    
 }
 
 .footer {
