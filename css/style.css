@@ -364,6 +364,8 @@ hr {
     aspect-ratio: 16 / 9;
     transition: transform 0.3s ease;
     width: 273px;
+    display: flex;
+    flex-grow: 1;
 
 
 
