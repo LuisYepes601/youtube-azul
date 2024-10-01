@@ -121,7 +121,7 @@ input[type="search"] {
     position: sticky;
     top: 76px;
     z-index: 1;
-    
+
 
 
 
@@ -169,7 +169,7 @@ input[type="search"] {
 
 .aside {
     grid-area: aside;
-    width:calc(100%);
+    width: calc(100%);
     background-color: var(--color-aside);
     display: flex;
     gap: 1rem;
@@ -336,16 +336,24 @@ hr {
 .card12 {
     grid-area: card12;
 
-}.card13 {
+}
+
+.card13 {
     grid-area: card13;
 
-}.card14 {
+}
+
+.card14 {
     grid-area: card14;
 
-}.card15 {
+}
+
+.card15 {
     grid-area: card15;
 
-}.card16{
+}
+
+.card16 {
     grid-area: card16;
 
 }
@@ -397,7 +405,7 @@ strong {
     .content {
         overflow: none;
         grid-template-areas:
-        
+
             "header header header header header"
             "barra__busqueda barra__busqueda barra__busqueda barra__busqueda barra__busqueda"
             "aside card1 card1 card2 card2"
@@ -407,7 +415,16 @@ strong {
             "aside footer footer footer footer";
 
 
-    }.card3,.card4,.card6,.card8, .card10, .card12, .card14, .card16{
+    }
+
+    .card3,
+    .card4,
+    .card6,
+    .card8,
+    .card10,
+    .card12,
+    .card14,
+    .card16 {
         display: none;
     }
 
@@ -436,10 +453,12 @@ strong {
 
 
 
-    }.aside{
-       
-       
-        
+    }
+
+    .aside {}
+
+    .video:hover {
+        transform: none;
     }
 
     .menu__lateral {
@@ -521,17 +540,40 @@ strong {
 
     hr {
         display: none;
-    }.aside{
+    }
+
+    .aside {
         width: 100%;
         overflow: scroll;
-    }.card5,.card6,.card7,.card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15,.card16{
+    }
+
+    .card5,
+    .card6,
+    .card7,
+    .card8,
+    .card9,
+    .card10,
+    .card11,
+    .card12,
+    .card13,
+    .card14,
+    .card15,
+    .card16 {
         display: none;
-    }.video{
+    }
+
+    .video {
         width: 100%;
-    }.video_contain{
+    }
+
+    .video_contain {
         display: flex;
         align-items: start;
-    }.fecha_publicacion{
+    }.video:hover {
+        transform: none;
+    }
+
+    .fecha_publicacion {
         margin-left: 3.6rem;
     }
 
