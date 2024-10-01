@@ -363,9 +363,10 @@ hr {
     /* 50% del alto de la ventana */
     aspect-ratio: 16 / 9;
     transition: transform 0.3s ease;
-    width: 273px;
+    width: 100%;
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
+    
 
 
 
@@ -379,6 +380,7 @@ hr {
     display: flex;
     gap: 1rem;
     padding: .7rem 0 .7rem 0;
+    width: 80%;
 }
 
 .footer {
